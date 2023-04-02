@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Franky's personal website</title>
+  </head>
+  <body>
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+      :root {
+        --fw-300: 300;
+        --fw-500: 500;
+        --fw-700: 700;
+        --lgwarm: linear-gradient(rgb(63, 1, 63), rgb(179, 108, 1));
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        max-width: 1440px;
+
+        min-height: 100vh;
+        margin: auto;
+      }
+
+      .wrapper {
+        position: fixed;
+        background: white;
+        margin: 0;
+        z-index: 9999;
+        top: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      @media (width<450px) {
+        .wrapper {
+          background: rgba(255, 255, 255, 0.341);
+        }
+      }
+
+      .nav_list {
+        display: flex;
+        gap: 2rem;
+
+        list-style: none;
+
+        font-weight: var(--fw-700);
+        font-size: 1.2rem;
+
+        text-transform: uppercase;
+        color: black;
+      }
+
+      .skip-link:hover {
+        border: solid;
+        font-size: 1.3rem;
+
+        background: goldenrod;
+      }
+
+      .svg_me {
+        display: inline;
+        vertical-align: bottom;
+      }
+
+      .svg_app {
+        display: inline;
+        vertical-align: bottom;
+        margin-left: 0.2em;
+      }
+
+      .svg_photo{display: inline;
+        vertical-align: bottom;
+        margin-left: 0.2em;
+        fill: black;
+
+      }
+
+      #svg_photo:hover{
+        cursor: pointer;
+      }
+
+      .svg_contact {
+        display: inline;
+        vertical-align: bottom;
+        margin-left: 0.2em;
+      }
+
+      .header_container_main_img {
+        border: solid;
+        padding: 1em;
+        min-height: 800px;
+        background-image: url("42691235134_1bae23213a_o.jpg");
+        background-size: cover;
+      }
+      .welcome_msg {
+        color: whitesmoke;
+        max-width: 30ch;
+
+        background: rgba(128, 128, 128, 0.371);
+        transform: translateY(16em);
+        padding: 1em;
+      }
+
+      .header_divider {
+        border: solid;
+        margin: 0;
+        min-height: 80px;
+        padding: 0.5em;
+      }
+      .about_me {
+        display: grid;
+        gap: 1em;
+        border: solid;
+        padding: 1em;
+        min-height: 800px;
+        background: var(--lgwarm);
+        grid-template-areas:
+          "header"
+          "HI"
+          "Music"
+          "WB"
+          "Programming";
+      }
+
+      .about_me--card {
+        border: solid;
+        border-radius: 5%;
+        background: rgba(128, 128, 128, 0.371);
+        box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.842);
+      }
+
+      .viewing_exp{
+        background: rgba(128, 128, 128, 0.371);
+        font-weight: var(--fw-500);
+        line-height: 2em;
+
+
+      }
+
+      .about_me--header {
+        grid-area: header;
+        background: rgba(128, 128, 128, 0.371);
+        padding: 0.5em;
+        font-size: 1.5em;
+      }
+      .about_me--HI {
+        grid-area: HI;
+      }
+      .about_me--Music {
+        grid-area: Music;
+      }
+      .about_me--WB {
+        grid-area: WB;
+      }
+      .about_me--Programming {
+        grid-area: Programming;
+      }
+
+      @media (width>1200px) {
+        .about_me {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-areas:
+            "header header header header"
+            "HI Music WB Programming";
+        }
+      }
+
+      .header_container_app {
+        border: solid;
+        margin: 0;
+        height: 80px;
+        padding: 0.5em;
+      }
+
+      .container_app {
+        display: grid;
+        gap: 1em;
+        border: solid;
+        padding: 1em;
+        align-items: center;
+        background: var(--lgwarm);
+      }
+      .container_app--app_img {
+        max-width: 100%;
+      
+      }
+
+      .container_app--app_img:hover {cursor: pointer;
+
+      }
+      #typingapp_img {
+        display: grid;
+      }
+      @media (width>800px) {
+        .container_app {
+          grid-template-columns: 1fr 1fr 2fr;
+        }
+      }
+      @media (width>1000px) {
+        .header_container_app {
+          text-align: center;
+        }
+      }
+
+      .header_contact_me {
+        background: rgba(128, 128, 128, 0.371);
+        font-weight: var(--fw-700);
+      }
+    </style>
+
+    <header>
+      <div class="main-content" id="main-content">MAIN</div>
+    </header>
+    <main>
+      <nav class="wrapper">
+        <ul class="nav_list">
+          <li>
+            <a class="skip-link" href="#header_about_me">About Me</a>
+            <svg
+              class="svg_me"
+              width="1.2em"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <title>account</title>
+              <path
+                d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
+              />
+            </svg>
+          </li>
+
+          <li>
+            <a class="skip-link" href="#app">My Programming Journey</a
+            ><svg
+              class="svg_app"
+              width="1.2em"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <title>desktop-classic</title>
+              <path
+                d="M6,2C4.89,2 4,2.89 4,4V12C4,13.11 4.89,14 6,14H18C19.11,14 20,13.11 20,12V4C20,2.89 19.11,2 18,2H6M6,4H18V12H6V4M4,15C2.89,15 2,15.89 2,17V20C2,21.11 2.89,22 4,22H20C21.11,22 22,21.11 22,20V17C22,15.89 21.11,15 20,15H4M8,17H20V20H8V17M9,17.75V19.25H13V17.75H9M15,17.75V19.25H19V17.75H15Z"
+              />
+            </svg>
+          </li>
+
+          <li>
+            <a class="skip-link" id="svg_photo">Photography Portfolio</a
+            ><svg class="svg_photo" 
+            width="1.2em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>camera</title><path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z" /></svg>
+            
+                        
+          </li>
+
+          <li>
+            <a class="skip-link" href="#header_contact_me" id="contact_me"
+              >Contact Me</a
+            ><svg
+              class="svg_contact"
+              width="1.2em"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 22"
+            >
+              <title>email</title>
+              <path
+                d="M1 5H2V4H20V5H21V18H20V19H2V18H1V5M3 17H19V9H18V10H16V11H14V12H12V13H10V12H8V11H6V10H4V9H3V17M19 6H3V7H5V8H7V9H9V10H13V9H15V8H17V7H19V6Z"
+              />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="header_container_main_img" id="main_img">
+        <article class="welcome_msg">
+          HI, my name is Franky Yuen Welcome to my personal website
+        </article>
+      </h1>
+
+      <h4 class="header_divider" id="header_about_me">
+        <div class="viewing_exp">For the best viewing experience, larger screen size and modern browser is highly recommended.</div>
+        All the content on this site is my original work. 
+        <br />From concept, design to code(using HTML,CSS and JavaScript).
+        <br />Without the use of AI tools or following a project tutorial.
+      </h4>
+      <h2 class="about_me">
+        <article class="about_me--header">
+          Get to know me
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            rerum at nulla autem quidem nostrum sint ad assumenda. Consectetur,
+            iste.
+          </p>
+        </article>
+
+        <article class="about_me--card">
+          <h4 class="about_me--h4">HI</h4>
+        </article>
+        <article class="about_me--card">
+          <h4 class="about_me--Music">Music</h4>
+        </article>
+        <article class="about_me--card">
+          <h4 class="about_me--WB">Well Being</h4>
+        </article>
+        <article class="about_me--card">
+          <h4 class="about_me--Programming">Programming</h4>
+        </article>
+      </h2>
+      <h4 class="header_divider" id="app"></h4>
+
+      <h3 class="header_container_app">
+        My web development/programming journey
+        <article class="article_container_app"></article>
+      </h3>
+      <div class="container_app">
+        <img
+          class="container_app--app_img"
+          id="typingapp_img"
+          src="https://raw.githubusercontent.com/Chisato23/Chisato23.github.io/main/Typing_APP.png"
+          alt="typingapp"
+        />
+        
+          <img
+            class="container_app--app_img"
+            id="copytextapp_img"
+            src="CopyTextMSG_APP.png"
+            alt="copytextapp"
+        /></a>
+
+        <img
+          class="container_app--app_img"
+          id="lightshowapp_img"
+          src="LightShow_APP.png"
+          alt="lightshowapp"
+        />
+      </div>
+      <h4 class="header_divider"></h4>
+
+      <h5 class="header_contact_me" id="header_contact_me">
+        Email Address: franky3923@gmail.com
+      </h5>
+      <h4 class="header_divider"></h4>
+    </main>
+
+    <script>
+      document
+        .getElementById("typingapp_img")
+        .addEventListener("click", openNewTab_typing);
+
+        document
+        .getElementById("copytextapp_img")
+        .addEventListener("click", openNewTab_text);
+
+        document
+        .getElementById("lightshowapp_img")
+        .addEventListener("click", openNewTab_ls);
+
+        document
+        .getElementById("svg_photo")
+        .addEventListener("click", openNewTab_photo);
+        
+
+      function openNewTab_text() {
+        console.log("opentab working");
+        window.open("https://copytextmsgapp.netlify.app/", null);
+      }
+
+      function openNewTab_typing() {
+        console.log("opentab working");
+        window.open("https://funtypingapp.netlify.app/", null);
+      }
+
+      function openNewTab_ls() {
+        console.log("opentab working");
+        window.open("https://lightshowapp.netlify.app/", null);
+      }
+
+      function openNewTab_photo() {
+        console.log("opentab working");
+        window.open("https://sites.google.com/view/tokyojapanbyfrankyyuen/%E9%A6%96%E9%A0%81", null);
+      }
+    </script>
+  </body>
+</html>
