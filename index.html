@@ -22,10 +22,11 @@
         box-sizing: border-box;
       }
       :root {
+        scroll-behavior: smooth;
         --fw-300: 300;
         --fw-500: 500;
         --fw-700: 700;
-        --lgwarm: linear-gradient(rgb(63, 1, 63), rgb(179, 108, 1));
+        --lgwarm: linear-gradient(rgba(63, 1, 63, 0.661), rgba(179, 108, 1, 0.684));
       }
       body {
         font-family: "Roboto", sans-serif;
@@ -61,12 +62,17 @@
         font-size: 1.2rem;
 
         text-transform: uppercase;
-        color: black;
+
+        
       }
+      .skip-link{
+      color: black;}
+
 
       .skip-link:hover {
         border: solid;
         font-size: 1.3rem;
+        color: black;
 
         background: goldenrod;
       }
@@ -88,7 +94,9 @@
         fill: black;
 
       }
-
+      #svg_photo{
+        text-decoration: underline;
+      }
       #svg_photo:hover{
         cursor: pointer;
       }
@@ -114,9 +122,14 @@
         transform: translateY(16em);
         padding: 1em;
       }
-
-      .header_divider {
+      .footer{
         border: solid;
+        margin: 0;
+        min-height: 80px;
+        padding: 0.5em;
+      }
+      .header_divider {
+        
         margin: 0;
         min-height: 80px;
         padding: 0.5em;
@@ -151,11 +164,28 @@
 
       }
 
-      .about_me--header {
-        grid-area: header;
+      .about_me_wrapper{grid-area: header;
         background: rgba(128, 128, 128, 0.371);
         padding: 0.5em;
-        font-size: 1.5em;
+
+      }
+
+      .about_me--header {
+        
+        font-size: 1.3em;
+      }
+      .about_me--content-main{
+        font-size: 0.8em;
+        font-weight: var(--fw-500);
+        max-width: 70ch;
+        
+      }
+
+      .about_me--content{
+        font-size: 0.8em;
+        font-weight: var(--fw-500);
+        padding-left: 0.5em;
+
       }
       .about_me--HI {
         grid-area: HI;
@@ -178,12 +208,22 @@
             "HI Music WB Programming";
         }
       }
+      .header_container_app_wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      }
 
       .header_container_app {
         border: solid;
         margin: 0;
-        height: 80px;
+        min-height: 80px;
         padding: 0.5em;
+  font-size: 1.5em;
+  max-width: 50ch;
+  text-align: center;
+  align-items: center;
+
+
       }
 
       .container_app {
@@ -193,6 +233,12 @@
         padding: 1em;
         align-items: center;
         background: var(--lgwarm);
+      }
+
+      .article_container_app{
+        font-size: 1em;
+        font-weight: var(--fw-300);
+        padding-top: 1em;
       }
       .container_app--app_img {
         max-width: 100%;
@@ -219,6 +265,7 @@
       .header_contact_me {
         background: rgba(128, 128, 128, 0.371);
         font-weight: var(--fw-700);
+        font-size:1.3em;
       }
     </style>
 
@@ -291,39 +338,109 @@
 
       <h4 class="header_divider" id="header_about_me">
         <div class="viewing_exp">For the best viewing experience, larger screen size and modern browser is highly recommended.</div>
-        All the content on this site is my original work. 
+        All the content on this site is my original work(except the icons). 
         <br />From concept, design to code(using HTML,CSS and JavaScript).
-        <br />Without the use of AI tools or following a project tutorial.
+        <br />Without the use of AI tools or follow/copy a project tutorial.
       </h4>
       <h2 class="about_me">
+        <div class="about_me_wrapper">
         <article class="about_me--header">
-          Get to know me
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            rerum at nulla autem quidem nostrum sint ad assumenda. Consectetur,
-            iste.
+          Get to know me</article>
+          <p class="about_me--content-main">
+            Born and raised in Hong Kong, studied and lived in New Zealand since 2003 until 2013. 
+            <br />
+            <br /><br />
+            After graduation I moved back to Hong Kong, spent 16 months working on the West Kowloon LawCourt Building project. 
+            The real world experience in a professional setting opened up new perspectives and made me realize I'm capable and can acheive much more. 
+            So I decided to explore new career options dedicated on solving the biggest issues. 
+            <br /><br />In 2017, I came to the conclusion that the advancement in technology like Artificial Intelligence and Automation will have a massive impact and reshape the world in the near future.  
+            As a result I fully committed into programming and begin learning to code for the first time in my life. "There is a whole section on this below"
+            <br /><br />In mid 2019, China ended Hong Kong's democracy, western values along with the freedom we once had under British rule. 
+            I took part in all the peaceful protests and attempted to defend our home by all means.
+            Things went from bad to worse with the Covid pandemic later that year, fearing for the endless lockdown in China. 
+            My top priority was to find a way out of the city while ensuring the safety of my family.
+            <br /><br />When UK announced the immigration scheme in 2020, I started planning and managing family assets for a smooth transition.
+
+                        <br /><br />In late 2021, after a busy year of preparation, I moved to the UK permanently with my family. Resuming a normal life post Covid.   
+
           </p>
-        </article>
+        </div>
+        
 
         <article class="about_me--card">
-          <h4 class="about_me--h4">HI</h4>
+          <h4 class="about_me--h4">Business and Economics</h4>
+          <p class="about_me--content">Fundamental business principals are much more than business concepts to increase profit margins. 
+            Core concepts such as Supply and Demand; Diminishing returns; Opportunity Cost, can be related and applied to everything in life. 
+            Life is all about managing scarce resources, and make the best decision that leads to the best outcome.
+          </p>
         </article>
         <article class="about_me--card">
           <h4 class="about_me--Music">Music</h4>
+          <p class="about_me--content">Music is a crucial part of my life, I enjoy a wide range of music genre. 
+            I've performed at least a dozen times in front of a thousand audiences, in a children choir with lead solo role, then later as a guitarist in a high school band.
+          </p>
+
         </article>
         <article class="about_me--card">
-          <h4 class="about_me--WB">Well Being</h4>
+          <h4 class="about_me--WB">Philosophy & Well Being</h4>
+          <p class="about_me--content">In the grand scheme of things, we are insignificant, yet every small contribution matters. 
+             </p>
+
         </article>
         <article class="about_me--card">
-          <h4 class="about_me--Programming">Programming</h4>
+          <h4 class="about_me--Programming">Personal Goals and Challenges</h4>
+          <p class="about_me--content"> I'm passionate and curious in nature. In order to identify the root cause of suffering, 
+            I spend a considerable amount of time understanding core knowledge on politics, pyschology and philosophy. 
+            <br /> As a nation China do not value humanitarian goals,  
+            
+
+
+          </p>
         </article>
       </h2>
       <h4 class="header_divider" id="app"></h4>
 
+      <div class="header_container_app_wrapper">
+
       <h3 class="header_container_app">
-        My web development/programming journey
-        <article class="article_container_app"></article>
+        My Web Development/Programming Journey
+        <article class="article_container_app">
+As a business graduate with no computer science background. 
+Learning the fundamental of programming is really challenging at first, but once I'm able to apply the knowledge into building practical projects(this website for instance), the positive feedback loop kept me motivated and wanting more. 
+          The problem solving aspect of coding is what I love the most, adapting and using new tools to be more efficient is very engaging and rewarding.
+          <br /><br />
+          <br />Inspiration: I'm always grateful and admire the generous creators of the many free apps out there. 
+          I aim to contribute in the same way by making accessible and useful software for the world to make life easier.
+          <br /><br />
+
+        </article>
+        
+
       </h3>
+      <h3 class="header_container_app">
+        Try out the 3 Original Applications I made. 
+        <article class="info_app article_container_app">
+          
+          Although the Apps came from my own ideas, with millions of Apps out there, its highly possible something similar already exists.
+          <br /><br />This version of the App is for demo purposes only, with a basic setup to keep it user friendly. The actual App have extra custom functionality.
+          <br /><br />
+          The App on the "Left" is a Speed typing mini game:
+          <br />A fun tool designed for people wanting to improve their typing skills.
+          <br /><br />
+          The App in the "Middle" is an Accessible Text Generator:
+          <br />User only have to select the amount, click copy, then paste the text message on SMS or Whatsapp ready to be sent . 
+          It could be a grocery list, or for stock resupply for small businesses.
+          <br /><br />
+          The App on the "Right" is a Lightshow simulator:
+          <br />A preview of the lighting effect for a live show or a party. In the form of a web page, straight forward, easy to navigate without needing installation.
+
+                  </article>
+
+      </h3>
+      <article class="error">
+        Clicking on the image will direct you to the App on a new tab. 
+                </article>
+    </div>
       <div class="container_app">
         <img
           class="container_app--app_img"
@@ -350,8 +467,12 @@
 
       <h5 class="header_contact_me" id="header_contact_me">
         Email Address: franky3923@gmail.com
+        <br /><br />Feel free to contact me for more information.
+        <br> All feedbacks are welcome and always open to a discussion on solving world issues.
       </h5>
       <h4 class="header_divider"></h4>
+      <div class="footer"></div>
+
     </main>
 
     <script>
