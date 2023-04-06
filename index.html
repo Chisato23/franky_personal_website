@@ -47,11 +47,7 @@
         width: 100%;
       }
 
-      @media (width<450px) {
-        .wrapper {
-          background: rgba(255, 255, 255, 0.341);
-        }
-      }
+      
 
       .nav_list {
         display: flex;
@@ -65,6 +61,15 @@
         text-transform: uppercase;
 
         
+      }
+
+      @media (width<750px) {
+        .nav_list  {
+          display: grid;
+          gap:0.2em;
+        font-size: 0.7rem;
+
+        }
       }
       .skip-link{
       color: black;}
@@ -147,7 +152,7 @@
           "HI"
           "Music"
           "WB"
-          "Programming";
+          "Ref";
       }
 
       .about_me--card {
@@ -155,6 +160,10 @@
         border-radius: 5%;
         background: rgba(128, 128, 128, 0.371);
         box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.842);
+      }
+
+      .about_me--title{
+        text-align: center;
       }
 
       .viewing_exp{
@@ -197,8 +206,8 @@
       .about_me--WB {
         grid-area: WB;
       }
-      .about_me--Programming {
-        grid-area: Programming;
+      .about_me--ref {
+        grid-area: Ref;
       }
 
       @media (width>1200px) {
@@ -206,13 +215,14 @@
           grid-template-columns: 1fr 1fr 1fr 1fr;
           grid-template-areas:
             "header header header header"
-            "HI Music WB Programming";
+            "HI Music WB Ref";
         }
       }
+      @media (width>1000px){
       .header_container_app_wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      }
+      }}
 
       .header_container_app {
         border: solid;
@@ -223,7 +233,7 @@
   max-width: 50ch;
   text-align: center;
   align-items: center;
-
+  
 
       }
 
@@ -240,6 +250,8 @@
         font-size: 1em;
         font-weight: var(--fw-300);
         padding-top: 1em;
+        background: rgba(128, 128, 128, 0.371);
+
       }
       .container_app--app_img {
         max-width: 100%;
@@ -262,6 +274,7 @@
           text-align: center;
         }
       }
+      
 
       .header_contact_me {
         background: rgba(128, 128, 128, 0.371);
@@ -352,15 +365,15 @@
             <br />
             <br /><br />
             After graduation I moved back to Hong Kong, spent 16 months working on the West Kowloon LawCourt Building project. 
-            The real world experience in a professional setting opened up new perspectives and made me realize I'm capable and can acheive much more. 
+            The real world experience in a professional setting opened up new perspectives and made me realize I'm capable and can achieve much more. 
             So I decided to explore new career options dedicated on solving the biggest issues. 
             <br /><br />In 2017, I came to the conclusion that the advancement in technology like Artificial Intelligence and Automation will have a massive impact and reshape the world in the near future.  
             As a result I fully committed into programming and begin learning to code for the first time in my life. "There is a whole section on this below"
             <br /><br />In mid 2019, China ended Hong Kong's democracy, western values along with the freedom we once had under British rule. 
             I took part in all the peaceful protests and attempted to defend our home by all means.
-            Things went from bad to worse with the Covid pandemic later that year, fearing for the endless lockdown in China. 
-            My top priority was to find a way out of the city while ensuring the safety of my family.
-            <br /><br />When UK announced the immigration scheme in 2020, I started planning and managing family assets for a smooth transition.
+            <br />Things went from bad to worse with the Covid pandemic later that year, fearing for the endless lockdown in China. 
+            My top priority was to find a better future for my family else where. 
+            <br /><br />When UK announced the immigration scheme in 2020, I immediately started planning and transferring family assets for a smooth transition.
 
                         <br /><br />In late 2021, after a busy year of preparation, I moved to the UK permanently with my family. Resuming a normal life post Covid.   
 
@@ -369,30 +382,34 @@
         
 
         <article class="about_me--card">
-          <h4 class="about_me--h4">Business and Economics</h4>
+          <h4 class="about_me--title about_me--h4">Business and Economics</h4>
           <p class="about_me--content">Fundamental business principals are much more than business concepts to increase profit margins. 
-            Core concepts such as Supply and Demand; Diminishing returns; Opportunity Cost, can be related and applied to everything in life. 
-            Life is all about managing scarce resources, and make the best decision that leads to the best outcome.
+            <br /> <br />Core concepts such as Supply and Demand; Diminishing returns; Opportunity Cost, can be related and applied to everything in life. 
+            <br /><br />Effectively navigating life involves the management of limited resources and utilizing factual information to make decisions that lead to optimal results.
           </p>
         </article>
         <article class="about_me--card">
-          <h4 class="about_me--Music">Music</h4>
+          <h4 class="about_me--title about_me--Music">Music</h4>
           <p class="about_me--content">Music is a crucial part of my life, I enjoy a wide range of music genre. 
             I've performed at least a dozen times in front of a thousand audiences, in a children choir with lead solo role, then later as a guitarist in a high school band.
+            <br /> <br />Sometimes I gave off the wrong impression of being quiet or shy, that is just me being respectful and waiting for my turn to express myself.
           </p>
 
         </article>
         <article class="about_me--card">
-          <h4 class="about_me--WB">Philosophy & Well Being</h4>
+          <h4 class="about_me--title about_me--WB">Philosophy</h4>
           <p class="about_me--content">In the grand scheme of things, we are insignificant, yet every small contribution matters. 
-             </p>
+            <br /><br />In recent years, aside from programming, I devote a portion of my time to studying the fundamental principles of politics, psychology, and philosophy. 
+            <br />I believe that gaining a deep understanding of these subjects is crucial to identify the root cause of suffering. 
+                        So I can contribute to the right cause when the opportunity arrives.
+                      </p>
 
         </article>
         <article class="about_me--card">
-          <h4 class="about_me--Programming">Personal Goals and Challenges</h4>
-          <p class="about_me--content"> I'm passionate and curious in nature. In order to identify the root cause of suffering, 
-            I spend a considerable amount of time understanding core knowledge on politics, pyschology and philosophy. 
-            <br />
+          <h4 class="about_me--title about_me--ref">A Reference about me</h4>
+          <p class="about_me--content"> Here's a quote from my high school principals of 5 years:
+            <br /><br />"Franky is a confident and honest young man with a very friendly and caring attitude." He has the ability to relate well with all age groups and is socially sensitive to all cultures. He has a wonderful sense of humour and is able to handle most situations in life with cheerfulness and dignity."
+            
             
 
 
@@ -422,18 +439,19 @@ Learning the fundamental of programming is really challenging at first, but once
         Try out the 3 Original Applications I made. 
         <article class="info_app article_container_app">
           
-          Although the Apps came from my own ideas, with millions of Apps out there, its highly possible something similar already exists.
+          Although the Apps came from my own ideas, with millions of Apps out there, its highly possible something similar exists.
           <br /><br />This version of the App is for demo purposes only, with a basic setup to keep it user friendly. The actual App have extra custom functionality.
           <br /><br />
-          The App on the "Left" is a Speed typing mini game:
+          The App on the "Left" (or first one on mobile)is a Speed typing mini game:
           <br />A fun tool designed for people wanting to improve their typing skills.
           <br /><br />
           The App in the "Middle" is an Accessible Text Generator:
-          <br />User only have to select the amount, click copy, then paste the text message on SMS or Whatsapp ready to be sent . 
-          It could be a grocery list, or for stock resupply for small businesses.
+          <br />User only have to select the amount, click copy, then paste the text message on SMS or Whatsapp, all ready to be sent. 
+          <br />It could be a grocery list, or for stock resupply for small businesses.
           <br /><br />
           The App on the "Right" is a Lightshow simulator:
-          <br />A preview of the lighting effect for a live show or a party. In the form of a web page, straight forward, easy to navigate without needing installation.
+          <br />A preview of the lighting effect for a live show or a party. 
+          <br />In the form of a web page, straight forward, easy to navigate with no installation.
 
                   </article>
 
@@ -468,7 +486,7 @@ Learning the fundamental of programming is really challenging at first, but once
 
       <h5 class="header_contact_me" id="header_contact_me">
         Email Address: franky3923@gmail.com
-        <br /><br />Feel free to contact me for more information.
+        <br /><br />Feel free to contact me via email for more information, as I cannot show personal info on a public site.
         <br> All feedbacks are welcome and always open to a discussion on solving world issues.
       </h5>
       <h4 class="header_divider"></h4>
